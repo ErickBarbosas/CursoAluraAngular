@@ -9,7 +9,6 @@ import { Component, Output, OnInit, EventEmitter } from "@angular/core";
 export class NovaTransferenciaComponent{
   @Output() aoTransferir = new EventEmitter<any>();
 
-
   valor: number;
   destino: number;
 
