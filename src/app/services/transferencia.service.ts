@@ -7,19 +7,19 @@ import { Transferencia } from '../models/transferencia.model';
   providedIn: 'root'
 })
 export class TransferenciaService {
-private listatransferencia: any [];
+private listaTransferencia: any [];
 private url = 'http://localhost:3000/transferencias';
 
-constructor(private httpCliente: HttpClient) {
-  this.listatransferencia =[];
+constructor(private httpClient: HttpClient) {
+  this.listaTransferencia =[];
 }
 
 get transferencias(){
-return this.listatransferencia;
+return this.listaTransferencia;
 }
 
 todas(): Observable<Transferencia[]>{
-  return this.httpCliente.get<Transferencia[]>(this.url);
+  return this.httpClient.get<Transferencia[]>(this.url);
 }
 
 private hidratar(transferencia: any){
@@ -28,6 +28,6 @@ private hidratar(transferencia: any){
 
 adicionar(transferencia: any){
   this.hidratar(transferencia);
-  this.listatransferencia.push(transferencia);
+  this.listaTransferencia.push(transferencia);
 }
 }
