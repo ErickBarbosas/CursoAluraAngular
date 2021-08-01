@@ -26,8 +26,9 @@ private hidratar(transferencia: any){
   transferencia.data= new Date();
 }
 
-adicionar(transferencia: any){
+adicionar(transferencia: any): Observable<Transferencia>{
   this.hidratar(transferencia);
-  this.listaTransferencia.push(transferencia);
+
+  return this.httpClient.post<Transferencia>(this.url,transferencia);
 }
 }
