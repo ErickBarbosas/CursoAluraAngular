@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ap-photo',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 
 
 export class PhotoComponent{
-  url = 'https://conteudo.imguol.com.br/c/noticias/f4/2021/06/16/scarface-ficou-famoso-devido-a-sua-cicatriz-no-rosto-e-vivia-em-uma-reserva-no-quenia-1623882040609_v2_450x450.jpg'
-  description ='Leao'
+
+  @Input() url = ''
+  @Input() description =''
 }
