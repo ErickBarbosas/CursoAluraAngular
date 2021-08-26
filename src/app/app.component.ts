@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Console } from 'console';
+import {PhotoService} from '../app/photos/photo/photo.service'
 
 
 @Component({
@@ -12,15 +11,9 @@ export class AppComponent {
 
   photos: Object[] = []
 
-  constructor(http: HttpClient){
+  constructor(photoServico: PhotoService){
 
-    http.get<object[]>('http://localhost:3000/flavio/photos').subscribe
-    (photo => this.photos = photo,
-      erro => console.log(erro)
-
-      )
-
-
+    photoServico.listFromName('teste').subscribe(photo => this.photos = photo)
   }
 
 
