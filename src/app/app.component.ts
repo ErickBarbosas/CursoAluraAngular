@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {PhotoService} from '../app/photos/photo/photo.service'
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +8,5 @@ import {PhotoService} from '../app/photos/photo/photo.service'
 export class AppComponent {
 
 
-  constructor(private photoServico: PhotoService){}
+  constructor(){}
 }
