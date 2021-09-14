@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges,SimpleChange } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Photo } from '../../photo/photo';
 
 @Component({
@@ -13,7 +13,7 @@ export class PhotosComponent implements OnChanges {
 
   constructor() { }
 
-  ngOnChanges(chenges : SimpleChange){
+  ngOnChanges(chenges : SimpleChanges){
 
     if(chenges.photos)
     {
