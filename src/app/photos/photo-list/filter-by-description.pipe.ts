@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { text } from "@angular/core/src/render3/instructions";
 import { Photo } from "../photo/photo";
 
 
@@ -7,9 +6,9 @@ import { Photo } from "../photo/photo";
 
 export class FilterByDescription implements PipeTransform{
 
-  transform(photo: Photo[], descriptionQuery: string ){
+  transform(photo: Photo[], descriptionQuery: string =''){
 
-    descriptionQuery = descriptionQuery.trim().toLowerCase();
+    descriptionQuery = descriptionQuery.trim().toLowerCase()
 
     if (descriptionQuery){
       return photo.filter(
